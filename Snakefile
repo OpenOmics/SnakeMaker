@@ -165,7 +165,7 @@ rule make_gff1:
         cd {params.outdir}/{wildcards.samples}.rnd1.maker.output/
         gff3_merge -d {input.log}
         mkdir -p {params.outdir}/{wildcards.samples}.rnd1.maker.output/snap
-        cd {params.outdir}/{wildcards.samples}rnd1.maker.output/snap
+        cd {params.outdir}/{wildcards.samples}.rnd1.maker.output/snap
         maker2zff -x 0.5 -l 50 -c 0 -e 0 -o 0 -d {input.log}
         fathom genome.ann genome.dna -gene-stats > gene-stats.log
         fathom genome.ann genome.dna -validate > validate.log
